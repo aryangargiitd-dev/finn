@@ -1,0 +1,870 @@
+
+You are my principal AI engineer, senior full-stack developer, quantitative research engineer, and product design partner.
+
+We are building a serious, submission-ready product for the ENAM Holdings AI/ML Engineer hiring challenge at IIT Delhi.
+
+PROJECT NAME: FINN
+TAGLINE: From market noise to investment intelligence.
+
+MISSION
+Build a mobile-first AI-powered financial investment intelligence application for Indian public-market investors.
+
+This must be a REAL, FUNCTIONAL, DEPLOYABLE prototype, not a Figma-style mockup, static dashboard, superficial AI wrapper, or collection of disconnected features.
+
+Your objective is to create the strongest possible submission that demonstrates:
+1. Engineering ability
+2. Product thinking
+3. AI/ML application
+4. Financial information processing
+5. Information prioritization and judgment
+6. Data reliability and source traceability
+7. Software architecture
+8. Creativity and user experience
+9. Efficient use of AI models
+10. Ability to ship a working product
+
+IMPORTANT CONTEXT
+
+I am a final-year IIT Delhi undergraduate applying for ENAM Holdings' AI/ML Engineer position.
+
+The challenge is titled:
+"FINN: Financial Investment Agent — AI Engineer Build Challenge"
+
+Deadline: 15 November 2026.
+
+The challenge explicitly values a small, beautiful, working product over an ambitious but unreliable one.
+
+FIRST TASK: READ THE DOCUMENTATION
+
+Before writing any code, read these files if available in the project directory:
+
+1. ENAM_AI_Engineer_Build_Challenge_Main.pdf
+2. ENAM_Build_Challenge_Reference.pdf
+3. ENAM Holdings (AI_ML Engineer).pdf
+
+The main challenge document is the source of truth for submission requirements.
+
+The reference document defines financial terminology and announcement categories.
+
+The job description provides context on what ENAM expects from an AI engineer.
+
+If the files are unavailable, use the requirements in this prompt, but clearly identify any unverified document requirements.
+
+Do not silently invent or reinterpret requirements.
+
+PHASE 1: PRODUCT THINKING AND PLANNING
+
+Before implementation:
+
+1. Extract the mandatory requirements.
+2. Distinguish mandatory features from optional examples.
+3. Define the primary investor workflow.
+4. Choose a minimal but impressive product scope.
+5. Design the application architecture.
+6. Identify external APIs and their limitations.
+7. Determine how to handle unavailable or unreliable data.
+8. Create an implementation plan.
+9. Define acceptance criteria for each key feature.
+
+Write these decisions into:
+docs/PRODUCT_PLAN.md
+docs/ARCHITECTURE.md
+
+Do not spend excessive time planning. Proceed to implementation after establishing a coherent design.
+
+PRODUCT VISION
+
+FINN should answer three questions:
+
+1. What changed in my portfolio?
+2. Why should I care?
+3. What do the underlying financial documents actually support?
+
+The product should reduce information overload rather than simply aggregate more information.
+
+A user should be able to open FINN and understand the most important portfolio developments within approximately 30 seconds.
+
+CORE FEATURE 1: FINN PULSE
+
+Build an intelligent portfolio monitoring dashboard.
+
+A. Portfolio
+
+Create a mock portfolio of 18 NSE/BSE-listed companies across multiple sectors and market capitalizations.
+
+Suggested companies include:
+RELIANCE
+TCS
+INFY
+HDFCBANK
+ICICIBANK
+SBIN
+BHARTIARTL
+ITC
+HINDUNILVR
+LT
+TATAMOTORS
+MARUTI
+SUNPHARMA
+TITAN
+ASIANPAINT
+BAJFINANCE
+ADANIPORTS
+WIPRO
+
+Validate symbols against the data provider before using them.
+
+Allow users to:
+- View portfolio companies
+- Add a valid supported ticker
+- Remove a ticker
+- Open company details
+- Inspect latest available prices and volume
+- See data freshness timestamps
+
+B. Corporate announcements
+
+Build an ingestion pipeline for public corporate announcements filed with NSE/BSE.
+
+Use legitimate publicly accessible exchange filings or company investor-relations sources.
+
+Avoid depending on unofficial endpoints that are unstable or require circumventing access restrictions.
+
+Normalize records into a consistent schema.
+
+Suggested fields:
+- announcement_id
+- ticker
+- company_name
+- title
+- category
+- filing_timestamp
+- source_url
+- document_url
+- summary
+- relevance_score
+- priority
+- explanation
+- ingestion_timestamp
+
+Support relevant categories from the reference guide:
+results, M&A, fund_raise, management_change,
+litigation, insider_trading, earnings_call,
+investor_meetings, credit_rating, dividend,
+bonus_split, capex, press_release,
+postal_ballot, agm_egm, pledging, unclassified.
+
+C. Intelligent prioritization
+
+Do NOT simply sort announcements chronologically.
+
+Build a transparent relevance-ranking engine.
+
+Start with a deterministic ranking approach based on:
+- Announcement category
+- Potential financial significance
+- Recency
+- Materiality indicators
+- Portfolio relevance
+- Duplication or routine nature
+
+Use AI only when document interpretation genuinely improves the decision.
+
+Every priority label should have a concise explanation.
+
+Examples:
+"High priority — management change involving the CFO."
+"Low priority — routine compliance certificate."
+
+Do not treat all events in a category as equally material.
+
+Distinguish identified facts from model-inferred significance.
+
+D. Information feed
+
+Create an elegant mobile-first activity feed.
+
+Each item should contain:
+- Company identity and ticker
+- Announcement title
+- Timestamp
+- Priority indicator
+- One-line factual summary
+- "Why it matters" explanation
+- Link to the original filing
+
+Avoid verbose AI-generated text.
+
+Use progressive disclosure to keep the interface clean.
+
+E. Time filtering
+
+Default: last 24 hours.
+
+Support configurable time windows such as:
+24 hours
+7 days
+30 days
+Custom date range
+
+Time filters must affect the actual records shown.
+
+Routine announcements should be collapsed or deprioritized, with a way to reveal them.
+
+F. Price and volume anomalies
+
+Use yfinance or another reliable free data source.
+
+Calculate:
+- Latest available end-of-day closing price
+- Day-over-day percentage change
+- Daily volume
+- Recent average volume
+- Relative volume ratio
+
+Example:
+Relative Volume = Daily Volume / Average Volume over prior 20 trading sessions.
+
+Make threshold settings configurable.
+
+Suggested defaults:
+Absolute daily price change >= 3%
+Relative volume >= 2.0x
+
+Users should be able to modify these thresholds.
+
+Persist preferences.
+
+Generate an alert when thresholds are breached.
+
+Clearly distinguish EOD monitoring from real-time intraday monitoring.
+
+Do not claim instant detection of events when the source is only updated periodically.
+
+CORE FEATURE 2: FINN RESEARCH
+
+Build an on-demand company research interface.
+
+A user should be able to enter a supported NSE ticker and request financial research.
+
+The application must NOT be hardcoded to the 18 portfolio companies.
+
+It must be capable of researching a new company when public data is available.
+
+Use company annual reports, quarterly filings, and management earnings-call transcripts as the foundation.
+
+Use PRIMARY SOURCES ONLY for analytical conclusions.
+
+Do not use broker reports, financial news articles, third-party opinions, or the model's internal recollection as evidence for company-specific claims.
+
+Screener.in may be used as a directory for primary document links, subject to legitimate access.
+
+Company investor-relations websites and exchange filings are also valid primary sources.
+
+Do not assume that a source document exists until it has been retrieved.
+
+A. Business overview
+
+Extract:
+- What the company does
+- Main business segments
+- Revenue breakdown when available
+- Major business drivers
+
+B. Financial snapshot
+
+Extract available:
+- Revenue
+- EBITDA
+- PBT
+- PAT
+- Margins
+- Debt
+- Cash flow
+- ROE
+- ROCE
+
+Clearly state:
+- Reporting period
+- Units
+- Consolidated vs standalone figures
+- Source document
+
+Never mix reporting bases without labeling or reconciling them.
+
+C. Financial trajectory
+
+Where sufficient periods exist, show:
+- Revenue growth
+- Profit growth
+- Margin changes
+- Cash generation trends
+- Debt trajectory
+
+Use charts where useful.
+
+Separate YoY and QoQ comparisons.
+
+Do not calculate misleading growth rates when data is missing or inconsistent.
+
+D. Source-grounded AI research
+
+Implement a document retrieval pipeline.
+
+Suggested flow:
+
+Company ticker
+→ Resolve company identity
+→ Discover primary documents
+→ Download and parse documents
+→ Extract text and tables
+→ Chunk documents
+→ Index or cache retrieved content
+→ Retrieve relevant passages
+→ Generate grounded analysis
+→ Attach citations
+
+Every important assertion must be traceable to a primary document.
+
+Where possible, citations should include:
+- Document title
+- Reporting period
+- Page or section
+- Original document link
+
+Never generate fake citations.
+
+If the necessary evidence cannot be found, say:
+"Insufficient primary-source evidence."
+
+The system must NEVER fabricate financial figures.
+
+E. Research interface
+
+Use structured research sections, not only a chat window.
+
+Suggested sections:
+Overview
+Financials
+Trajectory
+Cash Quality
+Management
+Bull / Bear
+
+Allow the user to ask follow-up questions about a company.
+
+Answers must use the retrieved documents rather than the model's general knowledge.
+
+CORE FEATURE 3: FINN REALITY CHECK
+
+This is our main product differentiator.
+
+Goal:
+Help investors compare management's stated expectations with actual subsequent performance.
+
+Create a focused research workflow that answers:
+
+"What did management say would happen, and what actually happened?"
+
+A. Management statement extraction
+
+Read earnings-call transcripts and extract explicit forward-looking statements.
+
+Examples:
+- Revenue growth expectations
+- Margin guidance
+- Capital expenditure guidance
+- Capacity expansion plans
+- Debt reduction targets
+
+Record:
+- Exact quoted statement
+- Speaker, if available
+- Statement date
+- Metric
+- Expected value or direction
+- Target period
+- Document citation
+
+Do not transform vague optimism into numerical guidance.
+
+B. Actual performance
+
+Retrieve the relevant subsequently reported results.
+
+Match the realized metric and reporting period to the earlier guidance.
+
+C. Comparison
+
+Display:
+
+Management expectation
+→ Actual reported result
+→ Variance, where mathematically comparable
+→ Evidence-based assessment
+
+Possible statuses:
+Met
+Missed
+Partially met
+Not yet due
+Not comparable
+Insufficient evidence
+
+Do not force classifications where guidance is ambiguous.
+
+D. Presentation
+
+Build a beautiful visual comparison component with:
+- Expected metric
+- Actual metric
+- Comparison status
+- Short interpretation
+- Links to both original documents
+
+This feature should feel like a useful proprietary research workflow, not a generic AI summary.
+
+Start with ONE deeply supported company example.
+
+Expand only after that example works reliably.
+
+CORE FEATURE 4: ALERT SETTINGS
+
+Build a minimal functional settings interface.
+
+Users should configure:
+- Daily price change threshold
+- Relative volume threshold
+- Announcement categories
+- Digest time window
+
+Preferences must persist.
+
+A functional in-app notification center is sufficient for the initial prototype.
+
+Browser notifications are optional and should only be added if reliable.
+
+Do not claim to offer live push delivery without implementing its underlying mechanism.
+
+DESIGN REQUIREMENTS
+
+This is extremely important.
+
+ENAM explicitly values frontend quality, density, and interaction design.
+
+Create a premium financial intelligence interface.
+
+Design inspiration:
+- Institutional research workstations
+- High-quality modern fintech applications
+- Refined editorial layouts
+- Compact data-rich investment tools
+
+Do not copy any company's branding or proprietary interface.
+
+Visual character:
+- Professional
+- Minimal
+- Premium
+- Calm
+- Data-dense
+- Readable
+- Trustworthy
+
+Avoid:
+- Generic admin dashboards
+- Excessive gradients
+- Random colorful cards
+- Giant empty components
+- Decorative charts with no purpose
+- Long blocks of AI-generated text
+- Inconsistent spacing
+- Superficial animations
+
+Suggested visual system:
+- Dark navy or charcoal foundation
+- Warm off-white/light mode where appropriate
+- Restrained teal, blue or amber accents
+- Green/red only for meaningful positive/negative changes
+- Strong typography
+- Subtle borders
+- Compact information hierarchy
+
+Implement thoughtful:
+- Loading states
+- Empty states
+- Error states
+- Freshness indicators
+- Responsive typography
+- Touch-friendly controls
+- Expandable cards
+- Accessible navigation
+
+MOBILE-FIRST NAVIGATION
+
+Suggested primary navigation:
+Pulse
+Research
+Alerts
+Settings
+
+On mobile:
+Use a clean bottom navigation bar.
+
+On desktop:
+Adapt to a wider editorial/dashboard layout.
+
+Ensure the application works at approximately 375px screen width without horizontal overflow.
+
+PRODUCT INTERACTIONS
+
+Make the UI genuinely interactive.
+
+Users must be able to:
+- Select companies
+- Change time windows
+- Modify thresholds
+- Filter announcements
+- Expand research insights
+- Open original source documents
+- Search supported tickers
+- Run research
+- Inspect source citations
+- View Reality Check comparisons
+
+Every visible button should have an actual purpose.
+
+No nonfunctional controls masquerading as working features.
+
+TECHNICAL ARCHITECTURE
+
+Choose an architecture that maximizes reliability, simplicity and deployment speed.
+
+Preferred stack:
+
+Frontend:
+Next.js
+TypeScript
+Tailwind CSS
+shadcn/ui
+Lucide icons
+Recharts for useful financial charts
+
+Backend:
+Use Next.js server routes where practical.
+
+Use Python for financial data ingestion and document-processing scripts where it provides a clear advantage.
+
+Data:
+SQLite for local persistence or a similarly straightforward database.
+
+Use structured data models and a clean repository architecture.
+
+AI:
+Build an LLM-provider abstraction.
+
+Support a configurable provider via environment variables.
+
+Do not hardcode secrets.
+
+The core app should remain functional without an LLM key, using deterministic analysis and genuinely retrieved data.
+
+Do not present deterministic templates as AI-generated research.
+
+Use lightweight models for extraction and a stronger model only when nuanced reasoning is needed.
+
+Cache repeated extraction and research outputs.
+
+Use deterministic calculations wherever possible.
+
+Document-processing options:
+PyMuPDF
+pdfplumber
+pandas
+BeautifulSoup
+Other appropriate maintained packages
+
+Select tools based on their reliability rather than novelty.
+
+If introducing a Python service increases deployment complexity, justify the trade-off.
+
+DATA RELIABILITY
+
+Data correctness is non-negotiable.
+
+Implement:
+- Error handling
+- Network timeouts
+- Retry logic with limits
+- Data validation
+- Duplicate detection
+- Source tracking
+- Date normalization
+- Caching
+- Clear freshness timestamps
+
+Distinguish:
+1. Live or recently fetched public data
+2. Cached historical data
+3. Clearly labeled illustrative/demo data
+4. Unavailable data
+
+Never invent market prices, filings, quarterly results, or management statements.
+
+Never silently replace failed live data with fictional values.
+
+If using illustrative data, visibly mark it as such.
+
+The deployed demo should remain usable if an external API temporarily fails, but users must know when they are seeing cached or illustrative content.
+
+SECURITY AND RESPONSIBLE BEHAVIOR
+
+- Keep API keys server-side.
+- Use environment variables.
+- Validate ticker inputs.
+- Avoid arbitrary URL-fetch vulnerabilities.
+- Add sensible request and file-size limits.
+- Do not bypass website access controls.
+- Respect source access restrictions and rate limits.
+- Avoid introducing costly infrastructure without justification.
+
+FINANCIAL INTERPRETATION
+
+FINN is an information and research tool, not an automated trading recommendation engine.
+
+Do not invent target prices or present unsupported buy/sell recommendations.
+
+Clearly separate:
+- Reported facts
+- Calculated metrics
+- Management opinions
+- AI interpretations
+
+The application should help investors form judgments rather than pretend to know future returns.
+
+BUILD PRIORITIES
+
+P0 — MUST WORK
+1. Mobile-first app
+2. Portfolio dashboard
+3. Working EOD price/volume ingestion
+4. Configurable anomaly detection
+5. At least one reliable corporate-announcement ingestion path
+6. Prioritized announcement feed
+7. Functional company research using retrieved primary sources
+8. Source citations
+9. Usable deployed application
+
+P1 — HIGH-VALUE DIFFERENTIATORS
+1. Reality Check
+2. Financial charts
+3. Saved alert settings
+4. Research follow-up questions
+5. Strong information hierarchy and polished interactions
+
+P2 — OPTIONAL
+1. Browser notifications
+2. Advanced semantic search
+3. Background scheduled jobs
+4. Multiple LLM routing strategies
+5. Voice interactions
+
+Do not sacrifice P0 reliability to implement P2 features.
+
+EXECUTION INSTRUCTIONS
+
+Work autonomously and iteratively.
+
+Step 1:
+Inspect the repository and project documents.
+
+Step 2:
+Create the implementation plan.
+
+Step 3:
+Initialize the project and install dependencies.
+
+Step 4:
+Build the application shell and navigation.
+
+Step 5:
+Implement market-data ingestion and anomaly calculations.
+
+Step 6:
+Implement corporate-announcement ingestion, categorization and ranking.
+
+Step 7:
+Implement the Pulse UI with real data.
+
+Step 8:
+Implement primary-document discovery and processing.
+
+Step 9:
+Build the Research experience with traceable citations.
+
+Step 10:
+Implement one fully supported Reality Check example.
+
+Step 11:
+Add settings and persistence.
+
+Step 12:
+Test core workflows.
+
+Step 13:
+Improve UI quality and mobile responsiveness.
+
+Step 14:
+Prepare deployment and submission materials.
+
+Do not stop at creating files.
+
+Run the application, inspect errors, correct them and verify the user flows.
+
+If a tool or integration is blocked, implement the best honest, working fallback and document the limitation.
+
+TESTING REQUIREMENTS
+
+Create practical automated tests for:
+- Price change calculations
+- Relative volume calculations
+- Threshold evaluation
+- Announcement categorization
+- Relevance ranking
+- Ticker validation
+- Financial metric calculations
+- Missing data handling
+- Source citation association
+
+Perform smoke tests for:
+- Home page loading
+- Portfolio rendering
+- Time filtering
+- Ticker search
+- Research generation
+- Citation navigation
+- Settings persistence
+- Mobile layouts
+
+If possible, use Playwright for critical end-to-end browser tests.
+
+Do not claim tests passed unless they were actually executed successfully.
+
+DEPLOYMENT
+
+Prepare the application for deployment on a suitable free-tier platform.
+
+Prefer a simple deployment route such as Vercel if architecture permits.
+
+Avoid a deployment architecture requiring multiple paid services.
+
+Include:
+- .env.example
+- README.md
+- Installation instructions
+- Local development commands
+- Build commands
+- Deployment instructions
+- Known limitations
+
+Never commit secrets.
+
+SUBMISSION DOCUMENTATION
+
+Create:
+
+README.md
+docs/PRODUCT_PLAN.md
+docs/ARCHITECTURE.md
+docs/BUILD_DECISIONS.md
+docs/AI_BUILD_HISTORY.md
+docs/DEMO_SCRIPT.md
+docs/SUBMISSION_NOTES.md
+
+README should explain:
+- What FINN does
+- What makes it different
+- Technology stack
+- Setup and execution
+- Data sources
+- Feature coverage
+- Known limitations
+
+BUILD_DECISIONS should explain:
+- Why this architecture was chosen
+- Why certain features received priority
+- AI vs deterministic processing decisions
+- Model efficiency and caching
+- Important compromises
+
+AI_BUILD_HISTORY should document:
+- Coding agents used
+- Important prompts
+- Key engineering decisions
+- Iterations
+- Significant failures and corrections
+- Links or locations of original Codex/LLM sessions
+
+Do not fabricate a conversation log.
+Preserve genuine build history.
+
+DEMO_SCRIPT should provide a compelling 3–5 minute walkthrough covering:
+1. Portfolio overview
+2. Important announcements
+3. Configurable alerts
+4. Company research
+5. Management guidance versus actual results
+
+SUBMISSION_NOTES should provide a concise covering-email draft describing:
+- What was built
+- Key design choices
+- Technical architecture
+- AI integration
+- Trade-offs
+- Deliberately omitted features
+- Future improvements
+
+SUCCESS CRITERIA
+
+A reviewer should be able to:
+
+1. Open FINN on a mobile phone.
+2. Immediately understand the most important portfolio developments.
+3. Filter events by time and importance.
+4. Inspect unusual market activity.
+5. Adjust alert thresholds.
+6. Search for a company.
+7. View meaningful financial research backed by original documents.
+8. Inspect a management guidance versus actual performance comparison.
+9. Understand why the product is useful.
+10. Trust that the displayed evidence is genuine.
+
+The product must not depend on memorized demo examples for every workflow.
+
+At least one company research flow should work end-to-end with actual retrieved primary sources.
+
+The architecture must support unfamiliar NSE tickers wherever documents are available.
+
+FINAL OPERATING RULES
+
+- Prioritize a reliable working product.
+- Prefer complete vertical slices over unfinished parallel features.
+- Think like an investor and a product engineer.
+- Make meaningful technical decisions independently.
+- Do not ask unnecessary questions.
+- Use sensible defaults.
+- Maintain high code quality.
+- Do not overengineer.
+- Avoid fake data disguised as real data.
+- Keep the interface beautiful but functional.
+- Make all financial conclusions traceable.
+- Test what you build.
+- Document unresolved issues honestly.
+
+If a complicated feature threatens the deadline, simplify it rather than breaking the product.
+
+START NOW.
+
+First inspect the supplied documents and existing repository. Then briefly present the implementation plan and immediately begin building the first working vertical slice.
+
+Continue through implementation, testing, and deployment preparation rather than stopping after the plan.

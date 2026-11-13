@@ -1,0 +1,529 @@
+{
+  "version": 1,
+  "retrievedAt": "2026-11-13",
+  "status": "cached_historical",
+  "note": "Verified historical evidence pack, not current financials. Normalized financial facts and editorial paraphrases are distinguished from exact quotes. PDF page numbers are one-based; printedPage may differ.",
+  "sources": [
+    {
+      "id": "infy-fy25-results",
+      "ticker": "INFY",
+      "title": "Infosys FY25 results — IFRS USD",
+      "url": "https://www.infosys.com/investors/reports-filings/quarterly-results/2024-2025/q4/documents/ifrs-usd-press-release.pdf",
+      "kind": "results",
+      "publishedAt": "2025-04-17",
+      "period": "FY2025",
+      "retrievalMethod": "Primary PDF retrieved via web tool; direct download returned HTTP 403",
+      "retrievedAt": "2026-11-13",
+      "state": "cached_historical"
+    },
+    {
+      "id": "infy-q3-fy25-call",
+      "ticker": "INFY",
+      "title": "Infosys Q3 FY25 earnings call",
+      "url": "https://www.infosys.com/investors/reports-filings/quarterly-results/2024-2025/q3/documents/transcripts/earningscall.pdf",
+      "kind": "transcript",
+      "publishedAt": "2025-01-16",
+      "period": "Q3 FY2025",
+      "retrievalMethod": "Primary PDF retrieved via web tool; direct download returned HTTP 403",
+      "retrievedAt": "2026-11-13",
+      "state": "cached_historical"
+    },
+    {
+      "id": "infy-fy25-annual",
+      "ticker": "INFY",
+      "title": "Infosys Integrated Annual Report 2024–25",
+      "url": "https://www.infosys.com/investors/reports-filings/annual-report/annual/documents/infosys-ar-25.pdf",
+      "kind": "annual_report",
+      "publishedAt": null,
+      "period": "FY2025",
+      "retrievalMethod": "Primary PDF passages retrieved via web search index",
+      "retrievedAt": "2026-11-13",
+      "state": "cached_historical"
+    },
+    {
+      "id": "tcs-fy25-annual",
+      "ticker": "TCS",
+      "title": "TCS Integrated Annual Report 2024–25",
+      "url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/ar/annual-report-2024-2025.pdf",
+      "kind": "annual_report",
+      "publishedAt": null,
+      "period": "FY2025",
+      "retrievalMethod": "Primary PDF passages retrieved via web search index; direct download returned HTTP 403",
+      "retrievedAt": "2026-11-13",
+      "state": "cached_historical"
+    },
+    {
+      "id": "tcs-q4-fy25-call",
+      "ticker": "TCS",
+      "title": "TCS Q4 FY25 earnings call",
+      "url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2024-25/q4/Management%20Commentary/Transcript%20of%20the%20Q4%202024-25%20Earnings%20Conference%20Call%20held%20at%201900%20hrs%20IST%20on%20Apr%2010%2C%202025.pdf",
+      "kind": "transcript",
+      "publishedAt": "2025-04-10",
+      "period": "Q4 FY2025",
+      "retrievalMethod": "Primary PDF passages retrieved via web search index",
+      "retrievedAt": "2026-11-13",
+      "state": "cached_historical"
+    },
+    {
+      "id": "hcl-fy25-annual",
+      "ticker": "HCLTECH",
+      "title": "HCLTech Annual Report 2024–25",
+      "url": "https://www.hcltech.com/sites/default/files/document/open/annual-report/2025-08/Annual-Report-2024-25_0.pdf",
+      "kind": "annual_report",
+      "publishedAt": null,
+      "period": "FY2025",
+      "retrievalMethod": "Downloaded original PDF; pdftotext -layout; locally inspected",
+      "localFile": "hcl-ar.pdf",
+      "retrievedAt": "2026-11-13",
+      "state": "cached_historical",
+      "sha256": "9b92318dceffd61054f3d190bcfd9aa5311db94e38ae7eb72186821188295343"
+    },
+    {
+      "id": "hcl-q4-fy25-call",
+      "ticker": "HCLTECH",
+      "title": "HCLTech Q4 and annual FY25 earnings call",
+      "url": "https://www.hcltech.com/sites/default/files/en/investors/3098/transcriptearningscall.pdf",
+      "kind": "transcript",
+      "publishedAt": "2025-04-22",
+      "period": "Q4 FY2025",
+      "retrievalMethod": "Downloaded original PDF; pdftotext -layout; locally inspected",
+      "localFile": "hcl-call.pdf",
+      "retrievedAt": "2026-11-13",
+      "state": "cached_historical",
+      "sha256": "7e10a43d0ea859bd1d172819ea24732598ab2eb7065577b6402c122bfb0250e1"
+    },
+    {
+      "id": "itc-fy25-annual",
+      "ticker": "ITC",
+      "title": "ITC Report and Accounts 2025",
+      "url": "https://itcportal.com/content/dam/itc-corporate/open-pdfs/report-and-accounts/ITC-Report-and-Accounts-2025.pdf",
+      "kind": "annual_report",
+      "publishedAt": null,
+      "period": "FY2025",
+      "retrievalMethod": "Downloaded original PDF; pdftotext -layout; locally inspected",
+      "localFile": "itc-ar.pdf",
+      "retrievedAt": "2026-11-13",
+      "state": "cached_historical",
+      "sha256": "2a51bc137e460a2549785e784465e6fe1aa7bcd2ca1077d6e2d2465efdd27acc"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "infy-financials",
+      "sourceId": "infy-fy25-results",
+      "section": "Condensed consolidated IFRS financial statements",
+      "text": "Basis: consolidated IFRS. Currency: USD million. Years ended March 31. FY2025 / FY2024: revenue 19277 / 18562; operating profit 4071 / 3834; PBT 4447 / 4346; net profit after minority interest 3158 / 3167; cash and equivalents 2861 / 1773. Q4 FY2025 / Q4 FY2024: revenue 4730 / 4564; operating profit 992 / 917; PBT 1117 / 1232; net profit after minority interest 813 / 958.",
+      "page": 6,
+      "printedPage": 6,
+      "kind": "normalized_facts"
+    },
+    {
+      "id": "infy-actual",
+      "sourceId": "infy-fy25-results",
+      "section": "FY25 performance highlights",
+      "text": "FY2025 constant-currency revenue growth 4.2%; operating margin 21.1%; free cash flow USD 4088 million. These are fiscal-year results, not Q4 growth metrics.",
+      "page": 1,
+      "printedPage": 1,
+      "kind": "normalized_facts"
+    },
+    {
+      "id": "infy-guidance",
+      "sourceId": "infy-q3-fy25-call",
+      "section": "CFO prepared remarks",
+      "text": "we are revising our FY'25 revenue guidance to 4.5% to 5% in constant currency terms.",
+      "page": 7,
+      "printedPage": 7,
+      "kind": "exact_quote"
+    },
+    {
+      "id": "infy-business",
+      "sourceId": "infy-fy25-annual",
+      "section": "Board’s report — revenue distribution by business segments",
+      "text": "FY2025 consolidated revenue mix: financial services and insurance 27.7%; retail, consumer packaged goods and logistics 13.5%; communication, telecom OEM and media 11.7%; energy, utilities, resources and services 13.3%; manufacturing 15.5%; hi-tech 8.0%; life sciences and healthcare 7.3%; others 3.0%.",
+      "page": null,
+      "printedPage": 60,
+      "kind": "normalized_facts"
+    },
+    {
+      "id": "tcs-financials",
+      "sourceId": "tcs-fy25-annual",
+      "section": "Management Discussion and Analysis — Financial Performance Overview",
+      "text": "Basis: consolidated Ind AS, INR crore. FY2025 revenue 255324; EBIT before other income 62165; PAT attributable to shareholders 48553; operating margin 24.3%; net margin 19.0%. FY2024 revenue 240893. Reported revenue growth 6.0%; constant-currency growth 4.2%. The FY2024 EBIT and PAT comparatives in this section exclude a legal claim settlement; do not compare them as unadjusted reported profits.",
+      "page": null,
+      "printedPage": null,
+      "kind": "normalized_facts"
+    },
+    {
+      "id": "tcs-management",
+      "sourceId": "tcs-q4-fy25-call",
+      "section": "Management commentary on demand",
+      "text": "Management reported decision delays and closer scrutiny of discretionary spending in April 2025, with increased macroeconomic and geopolitical uncertainty since January. These are management observations, not independently established causal explanations.",
+      "page": 8,
+      "printedPage": 8,
+      "kind": "paraphrase"
+    },
+    {
+      "id": "hcl-financials",
+      "sourceId": "hcl-fy25-annual",
+      "section": "Consolidated statement of profit and loss",
+      "text": "Basis: consolidated Ind AS, INR crore. FY2025 / FY2024: revenue 117055 / 109913; PBT 23261 / 20967; total PAT 17399 / 15710; depreciation and amortization 4084 / 4173; finance costs 644 / 553.",
+      "page": 337,
+      "printedPage": 329,
+      "kind": "normalized_facts"
+    },
+    {
+      "id": "hcl-owners",
+      "sourceId": "hcl-fy25-annual",
+      "section": "Consolidated statement of profit and loss — attribution",
+      "text": "Basis: consolidated Ind AS, INR crore. PAT attributable to owners of the company: FY2025 17390; FY2024 15702. Minority interest in PAT: FY2025 9; FY2024 8.",
+      "page": 338,
+      "printedPage": 330,
+      "kind": "normalized_facts"
+    },
+    {
+      "id": "hcl-business",
+      "sourceId": "hcl-fy25-annual",
+      "section": "Another year of best-in-class growth",
+      "text": "FY2025 segment revenue, INR crore, before elimination: IT and Business Services 86438; Engineering and R&D Services 18960; HCLSoftware 12049. These segment totals include inter-segment revenues and must not be summed as consolidated revenue.",
+      "page": 16,
+      "printedPage": 9,
+      "kind": "normalized_facts"
+    },
+    {
+      "id": "hcl-cash",
+      "sourceId": "hcl-q4-fy25-call",
+      "section": "CFO remarks on cash generation",
+      "text": "FY2025, USD billion: operating cash flow 2.63; free cash flow 2.5; gross cash 3.62; net cash 3.35. Management reported operating cash flow to net income conversion 129% and free cash flow to net income 123%.",
+      "page": 13,
+      "printedPage": null,
+      "kind": "normalized_facts"
+    },
+    {
+      "id": "itc-financials",
+      "sourceId": "itc-fy25-annual",
+      "section": "Consolidated statement of profit and loss",
+      "text": "Basis: consolidated Ind AS, INR crore. FY2025 / FY2024: revenue from operations 81612.78 / 73891.43; PBT continuing operations 26926.94 / 26400.28; PAT continuing operations 20036.47 / 20190.82; total PAT including discontinued operations 35052.48 / 20751.36. FY2025 discontinued operations include exceptional income 15128.81. Total PAT growth is not an underlying operating growth measure.",
+      "page": 251,
+      "printedPage": 233,
+      "kind": "normalized_facts"
+    },
+    {
+      "id": "itc-business",
+      "sourceId": "itc-fy25-annual",
+      "section": "Note 23B — gross revenue from products and services",
+      "text": "FY2025 gross product and service revenue: INR 80942.76 crore. Includes cigarettes, packaged foods and other FMCG; agriculture; paperboards, paper and packaging; and other activities including IT services. The gross amount includes specified excise and similar duties and excludes other operating revenue; it differs from total revenue from operations.",
+      "page": 292,
+      "printedPage": 274,
+      "kind": "normalized_facts"
+    },
+    {
+      "id": "itc-demerger",
+      "sourceId": "itc-fy25-annual",
+      "section": "Major associate of the group — ITC Hotels Limited",
+      "text": "The hotels business was demerged into ITC Hotels effective January 1, 2025. ITC held 39.88% of ITC Hotels. Continuing and discontinued operations are separately disclosed in the annual results.",
+      "page": 242,
+      "printedPage": 224,
+      "kind": "normalized_facts"
+    }
+  ],
+  "companies": {
+    "INFY": {
+      "name": "Infosys",
+      "period": "FY2025",
+      "basis": "Consolidated IFRS",
+      "unit": "USD million",
+      "overview": "Technology services and consulting, with revenue across financial services, manufacturing, retail and other industries.",
+      "overviewSource": "infy-business",
+      "metrics": [
+        {
+          "label": "Revenue",
+          "value": 19277,
+          "unit": "USD million",
+          "sourceId": "infy-fy25-results",
+          "chunkId": "infy-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "Operating profit",
+          "value": 4071,
+          "unit": "USD million",
+          "sourceId": "infy-fy25-results",
+          "chunkId": "infy-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "PBT",
+          "value": 4447,
+          "unit": "USD million",
+          "sourceId": "infy-fy25-results",
+          "chunkId": "infy-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "PAT attributable",
+          "value": 3158,
+          "unit": "USD million",
+          "sourceId": "infy-fy25-results",
+          "chunkId": "infy-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "Operating margin",
+          "value": 21.1,
+          "unit": "%",
+          "sourceId": "infy-fy25-results",
+          "chunkId": "infy-actual",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "Free cash flow",
+          "value": 4088,
+          "unit": "USD million",
+          "sourceId": "infy-fy25-results",
+          "chunkId": "infy-actual",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        }
+      ],
+      "trajectory": [
+        {
+          "period": "FY2024",
+          "revenue": 18562,
+          "pat": 3167,
+          "operatingProfit": 3834,
+          "sourceId": "infy-fy25-results",
+          "chunkId": "infy-financials"
+        },
+        {
+          "period": "FY2025",
+          "revenue": 19277,
+          "pat": 3158,
+          "operatingProfit": 4071,
+          "sourceId": "infy-fy25-results",
+          "chunkId": "infy-financials"
+        }
+      ]
+    },
+    "TCS": {
+      "name": "Tata Consultancy Services",
+      "period": "FY2025",
+      "basis": "Consolidated Ind AS",
+      "unit": "INR crore",
+      "overview": "Technology services research grounded in the annual report and earnings-call commentary.",
+      "overviewSource": "tcs-management",
+      "metrics": [
+        {
+          "label": "Revenue",
+          "value": 255324,
+          "unit": "INR crore",
+          "sourceId": "tcs-fy25-annual",
+          "chunkId": "tcs-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "EBIT",
+          "value": 62165,
+          "unit": "INR crore",
+          "sourceId": "tcs-fy25-annual",
+          "chunkId": "tcs-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "PAT attributable",
+          "value": 48553,
+          "unit": "INR crore",
+          "sourceId": "tcs-fy25-annual",
+          "chunkId": "tcs-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "Operating margin",
+          "value": 24.3,
+          "unit": "%",
+          "sourceId": "tcs-fy25-annual",
+          "chunkId": "tcs-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        }
+      ],
+      "trajectory": [
+        {
+          "period": "FY2024",
+          "revenue": 240893,
+          "sourceId": "tcs-fy25-annual",
+          "chunkId": "tcs-financials"
+        },
+        {
+          "period": "FY2025",
+          "revenue": 255324,
+          "sourceId": "tcs-fy25-annual",
+          "chunkId": "tcs-financials"
+        }
+      ]
+    },
+    "HCLTECH": {
+      "name": "HCL Technologies",
+      "period": "FY2025",
+      "basis": "Consolidated Ind AS",
+      "unit": "INR crore",
+      "overview": "IT and business services, engineering and R&D services, and enterprise software.",
+      "overviewSource": "hcl-business",
+      "metrics": [
+        {
+          "label": "Revenue",
+          "value": 117055,
+          "unit": "INR crore",
+          "sourceId": "hcl-fy25-annual",
+          "chunkId": "hcl-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "PBT",
+          "value": 23261,
+          "unit": "INR crore",
+          "sourceId": "hcl-fy25-annual",
+          "chunkId": "hcl-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "PAT attributable",
+          "value": 17390,
+          "unit": "INR crore",
+          "sourceId": "hcl-fy25-annual",
+          "chunkId": "hcl-owners",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        }
+      ],
+      "trajectory": [
+        {
+          "period": "FY2024",
+          "revenue": 109913,
+          "pat": 15702,
+          "sourceId": "hcl-fy25-annual",
+          "chunkId": "hcl-financials",
+          "patChunkId": "hcl-owners"
+        },
+        {
+          "period": "FY2025",
+          "revenue": 117055,
+          "pat": 17390,
+          "sourceId": "hcl-fy25-annual",
+          "chunkId": "hcl-financials",
+          "patChunkId": "hcl-owners"
+        }
+      ]
+    },
+    "ITC": {
+      "name": "ITC",
+      "period": "FY2025",
+      "basis": "Consolidated Ind AS; continuing operations for PBT/PAT",
+      "unit": "INR crore",
+      "overview": "FMCG, agriculture, paperboards, paper and packaging, with other activities including IT services.",
+      "overviewSource": "itc-business",
+      "metrics": [
+        {
+          "label": "Revenue",
+          "value": 81612.78,
+          "unit": "INR crore",
+          "sourceId": "itc-fy25-annual",
+          "chunkId": "itc-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "PBT, continuing",
+          "value": 26926.94,
+          "unit": "INR crore",
+          "sourceId": "itc-fy25-annual",
+          "chunkId": "itc-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": null
+        },
+        {
+          "label": "PAT, continuing",
+          "value": 20036.47,
+          "unit": "INR crore",
+          "sourceId": "itc-fy25-annual",
+          "chunkId": "itc-financials",
+          "period": "FY2025",
+          "basis": "Consolidated",
+          "note": "Includes non-controlling interests; excludes discontinued operations"
+        }
+      ],
+      "trajectory": [
+        {
+          "period": "FY2024",
+          "revenue": 73891.43,
+          "pat": 20190.82,
+          "sourceId": "itc-fy25-annual",
+          "chunkId": "itc-financials"
+        },
+        {
+          "period": "FY2025",
+          "revenue": 81612.78,
+          "pat": 20036.47,
+          "sourceId": "itc-fy25-annual",
+          "chunkId": "itc-financials"
+        }
+      ]
+    }
+  },
+  "realityCheck": {
+    "ticker": "INFY",
+    "metric": "Revenue growth",
+    "basis": "Consolidated, constant currency, year-on-year",
+    "targetPeriod": "FY2025",
+    "targetEnd": "2025-03-31",
+    "statementDate": "2025-01-16",
+    "speaker": "Jayesh Sanghrajka, Chief Financial Officer",
+    "quote": "we are revising our FY'25 revenue guidance to 4.5% to 5% in constant currency terms.",
+    "expectedLow": 4.5,
+    "expectedHigh": 5.0,
+    "actual": 4.2,
+    "unit": "%",
+    "actualDate": "2025-04-17",
+    "status": "Missed",
+    "variance": -0.3,
+    "varianceUnit": "percentage points versus lower bound",
+    "guidanceSourceId": "infy-q3-fy25-call",
+    "guidanceChunkId": "infy-guidance",
+    "actualSourceId": "infy-fy25-results",
+    "actualChunkId": "infy-actual",
+    "interpretation": "FY2025 constant-currency revenue growth finished 0.3 percentage points below the lower end of the January 2025 guidance range. This compares a specific guidance vintage with the subsequent annual outcome; it does not establish why the miss occurred.",
+    "historical": true
+  },
+  "limitations": [
+    "No current FY2027 research claimed.",
+    "INFY and TCS direct downloads returned HTTP 403; records are based on retrieved primary-document passages via web tools.",
+    "HCL transcript p12 has a unit typo in EBIT; that figure is omitted. INR annual report figures are used for HCL financial cards.",
+    "TCS FY2024 adjusted PAT is not used for reported-profit growth.",
+    "ITC total PAT includes discontinued-operation exceptional income; continuing PAT is shown.",
+    "No ITC earnings-call transcript was retrieved; only annual report evidence is supplied."
+  ]
+}
