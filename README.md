@@ -1,5 +1,7 @@
 # FINN
 
+**GitHub:** https://github.com/aryangargiitd-dev/finn
+
 **Public demo:** https://finn-investment-intelligence-aryan.spectacularlobster1.chatgpt.site
 
 ### From market noise to investment intelligence.

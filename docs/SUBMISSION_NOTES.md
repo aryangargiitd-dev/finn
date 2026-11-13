@@ -12,7 +12,7 @@ Dear ENAM team,
 I’m submitting FINN, a mobile-first investment intelligence prototype built around a focused workflow: understand portfolio changes, inspect the evidence, and compare management guidance with reported outcomes.
 
 Prototype: https://finn-investment-intelligence-aryan.spectacularlobster1.chatgpt.site
-GitHub: [insert repository URL after publishing]
+GitHub: https://github.com/aryangargiitd-dev/finn
 AI build history: [attach/export the genuine conversations linked in docs/AI_BUILD_HISTORY.md]
 
 FINN includes an editable 18-company NSE watchlist, end-of-day price/volume monitoring, configurable in-app alerts, and prioritized NSE/BSE announcements. Its research pipeline discovers primary documents for supported NSE tickers, parses page-linked evidence and supports source-grounded follow-up questions. The engine was also tested on COFORGE outside the prepared research notebooks.
@@ -31,9 +31,9 @@ IIT Delhi
 
 ## Final handoff checklist
 
-- Replace the GitHub URL placeholder after repository publication. The prototype URL is verified.
+- Prototype and GitHub links are included above.
 - Public reviewer access is enabled and verified without sign-in.
-- Publish the source to GitHub or grant reviewers access to a private repository.
+- The source repository is public for reviewer access.
 - Attach/share original conversations. Included message exports intentionally omit hidden reasoning, tool credentials and raw tool payloads; see the provenance note.
 - Read `docs/TEST_REPORT.md` and `docs/DEPLOYMENT.md` for the actual executed checks and remaining limits.
 - Review this email and send it yourself; no mail integration is invoked by this task.

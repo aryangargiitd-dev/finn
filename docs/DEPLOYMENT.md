@@ -40,4 +40,4 @@ The source uses Next route conventions but is built/tested with Vinext. A Vercel
 - Deployment: `appgdep_6af675b7abdc8191a911dc50755046ab`, succeeded.
 - Full HTTP smoke suite ran against the public production URL with live retrieval enabled: passed, including COFORGE (93 chunks).
 - Standalone local Wrangler preview missed initial readiness checks and later logged host file-watcher exhaustion (`EMFILE`). It was stopped without a local production smoke-test pass. Hosted production Worker checks passed independently.
-- GitHub plugin installation is confirmed, but its repository actions are not exposed in this chat. GitHub publication is still pending; the Sites source remote is not GitHub.
+- GitHub repository: https://github.com/aryangargiitd-dev/finn. Created through the official GitHub CLI after user device authorization. The Sites source remote remains separate.
