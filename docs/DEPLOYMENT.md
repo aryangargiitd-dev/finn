@@ -29,3 +29,15 @@ Configure `LLM_API_KEY` as a runtime secret and `LLM_BASE_URL` / `LLM_MODEL` as 
 ## Alternative hosting
 
 The source uses Next route conventions but is built/tested with Vinext. A Vercel migration requires validating standard Next runtime compatibility and replacing Worker-specific startup/configuration; it has not been claimed as tested. For independent Cloudflare hosting, use the generated Wrangler configuration with an appropriately provisioned account and bindings. Do not reuse a Sites project identity for a different account.
+
+## Confirmed deployment — 13 November 2026
+
+- Public reviewer URL: https://finn-investment-intelligence-aryan.spectacularlobster1.chatgpt.site
+- User explicitly approved public access; Sites confirmed `access_mode: public`. An unsigned-in browser opened the app successfully.
+- Deployed application commit: `59baea6170040a90278f2e2d5e8910137513fb62`. Subsequent documentation-only commits record the verified outcome.
+- Site: `appgprj_6af60cb4fd7481919065c45706ea3a15`
+- Version: `appgprj_6af60cb4fd7481919065c45706ea3a15~appgver_c88ba17dcd7c8191bb1b27afcec51818`
+- Deployment: `appgdep_6af675b7abdc8191a911dc50755046ab`, succeeded.
+- Full HTTP smoke suite ran against the public production URL with live retrieval enabled: passed, including COFORGE (93 chunks).
+- Standalone local Wrangler preview did not become ready in this host environment. Production Worker checks passed independently; no local production-preview pass is claimed.
+- GitHub plugin installation is confirmed, but its repository actions are not exposed in this chat. GitHub publication is still pending; the Sites source remote is not GitHub.

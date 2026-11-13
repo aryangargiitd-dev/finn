@@ -11,7 +11,7 @@ Dear ENAM team,
 
 I’m submitting FINN, a mobile-first investment intelligence prototype built around a focused workflow: understand portfolio changes, inspect the evidence, and compare management guidance with reported outcomes.
 
-Prototype: [insert reviewer-accessible deployed URL after checking access]
+Prototype: https://finn-investment-intelligence-aryan.spectacularlobster1.chatgpt.site
 GitHub: [insert repository URL after publishing]
 AI build history: [attach/export the genuine conversations linked in docs/AI_BUILD_HISTORY.md]
 
@@ -31,8 +31,8 @@ IIT Delhi
 
 ## Final handoff checklist
 
-- Replace both URL placeholders with verified destinations.
-- Enable appropriate reviewer access; a private Sites URL may require the owner's account.
+- Replace the GitHub URL placeholder after repository publication. The prototype URL is verified.
+- Public reviewer access is enabled and verified without sign-in.
 - Publish the source to GitHub or grant reviewers access to a private repository.
 - Attach/share original conversations. Included message exports intentionally omit hidden reasoning, tool credentials and raw tool payloads; see the provenance note.
 - Read `docs/TEST_REPORT.md` and `docs/DEPLOYMENT.md` for the actual executed checks and remaining limits.

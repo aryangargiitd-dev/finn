@@ -1,5 +1,7 @@
 # FINN
 
+**Public demo:** https://finn-investment-intelligence-aryan.spectacularlobster1.chatgpt.site
+
 ### From market noise to investment intelligence.
 
 A mobile-first Indian public-market research prototype for the ENAM AI Engineer Build Challenge. FINN helps answer: **what changed, why does it deserve attention, and what do the original documents support?**

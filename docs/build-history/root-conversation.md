@@ -93,3 +93,35 @@ github has been connected
 ## Assistant — 2026-11-13T02:21:06.253Z
 
 I’ll verify the GitHub connection and use it to publish the finished repository. The latest checks still pass; I’m completing the final interaction checks and deployment package now.
+
+## Assistant — 2026-11-13T02:30:41.733Z
+
+The GitHub connection is recognized. FINN’s first deployment is processing; I’m checking the deployed app and the final source package next.
+
+## Assistant — 2026-11-13T02:31:26.619Z
+
+FINN is deployed successfully with owner-only access. The local production preview hasn’t started listening, so I’m checking that before calling the production smoke test passed.
+
+## Assistant — 2026-11-13T02:32:49.666Z
+
+The hosted link is live behind the expected sign-in gate. GitHub is installed, but this chat still has no GitHub publishing tools; I’m preparing the complete source archive while that connection becomes available.
+
+## User — 2026-11-13T02:41:33.611Z
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_e5ab5d8569a440148b75b49da707f47d\",0]","question":"Should FINN’s deployed demo be accessible to anyone with the link so ENAM reviewers can open it? The Sites skill requires an explicit audience choice before changing the current private access (SKILL.md: “preserve an existing Site’s audience unless the user requests a change”).","answer":"Make the demo public for reviewers"}]
+</send_user_message_question_reply>
+
+## User — 2026-11-13T07:54:53.234Z
+
+go on
+
+## Assistant — 2026-11-13T07:55:03.652Z
+
+I’ll make the deployed demo public for reviewers, then verify it opens without sign-in.
+
+The last local production check was blocked because automatic approval review hit a usage limit—not because the command was deemed unsafe. The deployed site and completed source remain intact.
+
+## Assistant — 2026-11-13T07:56:41.623Z
+
+The public demo now opens without sign-in, and the production smoke tests passed—including live market data, announcement filters, cited answers, and a COFORGE research run that retrieved 93 primary-document passages. I’m recording those results and packaging the submission files.

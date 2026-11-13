@@ -31,3 +31,7 @@ Executed during the build on 13 November 2026 (IST). Tests below describe actual
 - No exhaustive accessibility audit, load test, OCR validation, all-ticker coverage test or unattended notification test was performed.
 - Browser source links were inspected for their actual URLs/page anchors; availability of every external link is not guaranteed.
 - Deployment outcome and any deployment-specific verification are recorded in `DEPLOYMENT.md`.
+
+## Public production verification
+
+On 13 November 2026, the full HTTP smoke suite passed against the public deployed URL with `FINN_TEST_LIVE=1`. COFORGE returned 93 parsed chunks after the official IR-host update. Production quotes included a fetched INFY observation dated 12 November and a TARSONS observation dated 11 November; differing latest valid dates remain explicit. The unsigned-in browser rendered Pulse and the cited Reality Check. This verifies the deployed Worker independently of the local Wrangler preview, which did not become ready.
