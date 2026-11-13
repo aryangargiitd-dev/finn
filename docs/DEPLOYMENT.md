@@ -39,5 +39,5 @@ The source uses Next route conventions but is built/tested with Vinext. A Vercel
 - Version: `appgprj_6af60cb4fd7481919065c45706ea3a15~appgver_c88ba17dcd7c8191bb1b27afcec51818`
 - Deployment: `appgdep_6af675b7abdc8191a911dc50755046ab`, succeeded.
 - Full HTTP smoke suite ran against the public production URL with live retrieval enabled: passed, including COFORGE (93 chunks).
-- Standalone local Wrangler preview did not become ready in this host environment. Production Worker checks passed independently; no local production-preview pass is claimed.
+- Standalone local Wrangler preview missed initial readiness checks and later logged host file-watcher exhaustion (`EMFILE`). It was stopped without a local production smoke-test pass. Hosted production Worker checks passed independently.
 - GitHub plugin installation is confirmed, but its repository actions are not exposed in this chat. GitHub publication is still pending; the Sites source remote is not GitHub.
