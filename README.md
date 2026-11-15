@@ -10,7 +10,7 @@ A mobile-first Indian public-market research prototype for the ENAM AI Engineer 
 
 ## Try the product
 
-The deployment link and exact verification status are recorded in `docs/DEPLOYMENT.md` when deployment completes. New Sites deployments are owner-private; reviewer access must be explicitly enabled before submission. A private Sites source repository is not a substitute for the challenge's GitHub deliverable.
+The public demo and GitHub repository are linked above. Deployment and verification details are in `docs/DEPLOYMENT.md`.
 
 ## What works
 
@@ -58,7 +58,7 @@ node tests/http-smoke.mjs
 FINN_TEST_LIVE=1 node tests/http-smoke.mjs
 ```
 
-The second command additionally verifies fresh primary-PDF research for COFORGE and depends on source availability. Override `FINN_TEST_ORIGIN` for a different local port. These checks do not bypass private deployment authentication.
+The second command additionally verifies fresh primary-PDF research for COFORGE and depends on source availability. Override `FINN_TEST_ORIGIN` for a different local port. The public deployment can be checked with `FINN_TEST_ORIGIN` set to its URL.
 
 Refresh the reproducible public-data snapshots:
 

@@ -18,7 +18,7 @@ Open Pulse → see ranked material changes and explicit freshness → inspect fi
 2. Research: ticker resolution beyond the initial watchlist, primary-document discovery, bounded retrieval/parsing, evidence chunks, extractive research without a key, optional grounded LLM with validated citation IDs. Cached verified evidence supports a useful demo under upstream failure. Unknown/unavailable companies return a clear evidence gap, not invented research.
 3. Reality Check: one carefully checked Infosys FY25 case, latest January 2025 guidance versus April 2025 outcome, same metric/period/basis; both sources and comparison method visible.
 4. Alerts/settings: deterministic threshold evaluation, category selection, digest preference, browser-local persistence; in-app monitoring on load/refresh, never described as live push.
-5. Quality: unit tests for calculations/ranking/validation/citations; integration checks of API routes and actual primary retrieval; browser smoke at 375px and desktop. Production build and private deployment; reviewer-public access and GitHub push reported honestly if unavailable.
+5. Quality: unit tests for calculations/ranking/validation/citations; integration checks of API routes and actual primary retrieval; browser smoke at 375px and desktop. Production build, public reviewer deployment and public GitHub repository, with their actual verification reported in the deployment and test documents.
 
 ## Implementation order
 

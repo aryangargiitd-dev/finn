@@ -20,7 +20,7 @@ The source helper commits and pushes the selected source to the Site repository 
 
 ## Submission access
 
-Owner-private hosting proves deployment but is not a reviewer-ready public link. Set reviewer access only after the user selects the audience. The GitHub source repository is a separate deliverable. Publication status and URLs are appended after the hosting provider confirms success.
+The site is public for reviewer access, and the GitHub source repository is a separate public deliverable. Exact URLs and verification are below.
 
 ## Optional model settings
 
