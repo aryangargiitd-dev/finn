@@ -2861,3 +2861,118 @@ summary {
 .passage-details summary {
   cursor: pointer;
 }
+
+/* Reading-focused dark palette. Keep financial up/down colors meaningful. */
+:root {
+  color-scheme: dark;
+  --bg: #0d171b;
+  --paper: #17262b;
+  --ink: #edf3ef;
+  --muted: #b6c5c0;
+  --line: #35474a;
+  --green: #a6d4aa;
+  --navy: #101e22;
+  --accent: #b9dcae;
+  --red: #ee9a8e;
+  --amber: #e4c080;
+}
+body, main { background: var(--bg); }
+.sidebar { border-right: 1px solid var(--line); }
+.topbar, .mobile-nav { background: #142329; border-color: var(--line); }
+:is(.brief, .alerts-summary, .ask-panel, .research-promo, .reality-conclusion, .notice) {
+  background: #21342f;
+  border-color: #456050;
+  color: var(--ink);
+}
+:is(.panel, .stat-card, .research-banner, .research-loading, .search-modal, .company-drawer) {
+  background: var(--paper);
+  border-color: var(--line);
+  color: var(--ink);
+}
+:is(.expectation, .actual, .financial-card, .trajectory-foot, .answer, .source-row) {
+  background: #1c3033;
+  border-color: var(--line);
+  color: var(--ink);
+}
+:is(.actual) { background: #302b29; border-color: #604940; }
+:is(.segmented, .count, .filing-icon, .stock-avatar, .company-monogram, .drawer-monogram, .routine-count, .historical-label, .growth-chip, .alert-summary-icon) {
+  background: #29403c;
+  border-color: #49625b;
+  color: #d8e9db;
+}
+:is(.segmented button.selected, .research-examples button.selected) {
+  background: #b9dcae;
+  color: #14261e;
+}
+:is(.button.secondary, .company-search, .research-examples button, select, input, .date-range input, .ask-panel input, .modal-search, .setting-field select) {
+  background: #203239;
+  border-color: #52666a;
+  color: var(--ink);
+}
+:is(.button.secondary:hover, .icon-button:hover, .stock-row:hover, .search-results button:hover) { background: #2d464b; }
+:is(.button.primary) { background: #b9dcae; color: #14261e; }
+:is(.button.primary:hover) { background: #d1ebc7; }
+:is(.topbar .breadcrumb, .eyebrow, .stat-title, .stat-foot, .brief p, .brief-footer,
+  .page-heading p, .panel-heading p, .research-banner p, .research-banner p span,
+  .research-examples > span, .research-tabs button, .evidence-card .eyebrow,
+  .coverage-notes, .comparison-note, .comparison small, .comparison > div > span,
+  .watchlist-foot, .panel-foot, .data-state, .filing-date, .filing-meta,
+  .stock-name small, .stock-price small, .source-row small, .financial-card > span,
+  .financial-card > small, .financial-card p, .setting-field p, .range-labels,
+  .methodology p, .search-help, .search-results small, .drawer-metrics span,
+  .chart-labels, .bar-chart span, .trajectory-foot p, .alerts-summary p,
+  .alert-row p, .ask-panel input::placeholder, .modal-search input::placeholder) {
+  color: #bdcdc8 !important;
+}
+:is(.evidence-card p, .comparison blockquote, .reality-conclusion p, .filing details p,
+  .source-row p, .answer p, .notice p, .methodology p) { color: #e0ebe5 !important; }
+:is(.source-link, .filing-bottom > a, .text-button, .ticker-link, .research-tabs button.active,
+  .filing summary, .coverage-notes summary, .passage-details summary, .comparison a,
+  .promo-link) { color: #b8dfaa !important; }
+:is(.priority.high, .missed, .negative) { color: #f2aa96 !important; }
+:is(.positive, .priority.medium) { color: #a9dcad !important; }
+:is(.filing, .alert-row, .evidence-card, .source-row, .stock-row, .panel-foot,
+  .watchlist-foot, .trajectory-foot, .drawer-metrics, .drawer-metrics > div,
+  .research-tabs, .feed-toolbar, .stat-foot) { border-color: var(--line); }
+:is(.research-banner .button, .source-link, .segmented button, .research-tabs button,
+  .mobile-nav button, .check-label, .icon-button) { min-height: 44px; }
+:is(.company-search, .research-examples button, .select-row select,
+  .date-range input, .setting-field select, .modal-search) { min-height: 44px; }
+:is(.page-heading p, .brief p, .panel-heading p, .research-banner p,
+  .research-examples > span, .evidence-card .eyebrow, .source-link,
+  .coverage-notes, .filing-date, .data-state, .filing-meta, .filing-bottom > a,
+  .stock-name small, .stock-price small, .watchlist-foot, .panel-foot,
+  .comparison small, .comparison a, .setting-field p, .check-label,
+  .search-help, .search-results small) { font-size: max(11px, 1em); }
+:is(.research-tabs button, .segmented button, .research-examples button,
+  .mobile-nav button, .button, .select-row select) { font-size: 12px; }
+:is(.company-search, .research-banner .button) { font-size: 12px; }
+:is(.search-modal, .company-drawer) { box-shadow: 0 20px 80px #0009; }
+.modal-backdrop { background: #050c10c9; }
+:is(.search-results button, .company-drawer .drawer-metrics > div) { border-color: var(--line); }
+:is(.price-chart) { background: linear-gradient(0deg, #203a3a, transparent); border-color: var(--line); }
+.mobile-nav button { color: #b6c9c2; font-size: 11px; }
+.mobile-nav button.active { color: #d8f1cb; }
+.mobile-nav button.active::before { background: #b9dcae; }
+.topbar .breadcrumb::before { color: #d3e9ce; }
+.watchlist-labels { background: #24373b; color: #b6c9c2; border-color: var(--line); }
+.stock-row { border-color: var(--line); }
+.stat-card > strong span, .stat-foot, .brief-footer, .eod-pill { color: #c3d2ca; }
+@media (max-width: 700px) {
+  .page-heading .eyebrow { font-size: 9px; }
+  .page-heading p, .brief p, .panel-heading p { font-size: 12px; }
+  .brief-footer, .stat-title, .stat-foot { font-size: 11px; }
+}
+.reality-panel { background: var(--paper); border-color: var(--line); color: var(--ink); }
+.reality-panel > h2 > span { color: #b8d1bc; }
+.reality-heading .eyebrow, .comparison .eyebrow, .comparison strong span { color: #b9d5ac; }
+.comparison blockquote { border-color: #7aa477; }
+.comparison-result > b, .missed { color: #f2aa96; }
+.missed { background: #442e2a; border-color: #875a4d; }
+.empty p, .reality-intro, .comparison-note { color: #bdcdc8; }
+.company-search kbd { background: #344a4c; border-color: var(--line); color: #dce8df; }
+.notice.error { background: #412b29; color: #f1b9a9; border-color: #795047; }
+.search-results button:hover { background: #263a3d; }
+.setting-field > label > span { color: #c6e5b5; }
+.check-label { color: #e3eee5; }
+.research-promo p, .research-promo .promo-link, .source-row p { color: #d5e6d8; }
